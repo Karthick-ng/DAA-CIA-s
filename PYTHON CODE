@@ -1,0 +1,25 @@
+import random as rd
+
+char = ['a','c','g','t']
+str1 = ""
+str2 = ""
+length = 16
+
+counts = {'a': 0, 'c': 0, 'g': 0, 't': 0}
+while len(str1) < length:
+    ch = rd.choice(char)
+    if counts[ch] < 4:
+        str1 += ch
+        counts[ch] += 1
+
+counts = {'a': 0, 'c': 0, 'g': 0, 't': 0}
+while len(str2) < length:
+    ch = rd.choice(char)
+    if counts[ch] < 4:
+        str2 += ch
+        counts[ch] += 1
+
+print(str1)
+print(len(str1))
+print(str2)
+print(len(str2))
