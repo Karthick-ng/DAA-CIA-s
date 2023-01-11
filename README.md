@@ -32,7 +32,7 @@ print(str2)
 print(len(str2))
 
 
-import numpy as np
+'''import numpy as np
 
 match = 5
 mismatch = -4
@@ -79,4 +79,30 @@ print(matrix)
 print(s1_aligned)
 print(s2_aligned)
 print(score)
+'''
 
+
+score = 5
+penalty = -4
+cols = len(b)
+rows = len(a)
+arr = np.zeros((rows+1, cols+1), dtype=int)
+
+i=1 #row
+j=1 #col 
+
+def align(arr,i,j):
+    if a[i-1] == b[j-1]:
+            arr[i][j] = arr[i-1][j-1]+score
+    else:
+            m = max(arr[i-1][j-1], arr[i-1][j], arr[i][j-1])
+            arr[i][j] = m + penalty  
+    if j!=len(b):
+        return align(arr,i,j+1)
+    elif i==len(a):
+        print(arr)
+    else:
+        j=1
+        return align(arr,i+1,j)
+        
+align(arr,i,j)
