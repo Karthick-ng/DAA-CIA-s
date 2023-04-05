@@ -1,7 +1,9 @@
+
+
+# DAA-CIA
+
+
 CIA-1
-
-# DNA-SEQUENCE-DAA-
-
 I used specific instance of the Needleman-Wunsch algorithm for alignment,
 Since i couldn't finish the exam on time, i am uploading the complete code here with alignment matrix, scores.
 I completely accept that , i got help help from youtube to complete this code(backtracking), but generating sequence and allignment matrix is my work and i did that honestly.
